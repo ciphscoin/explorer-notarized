@@ -416,7 +416,7 @@ Bitcoin.prototype._checkConfigIndexes = function (spawnConfig, node) {
   );
 
   if (spawnConfig.reindex && spawnConfig.reindex === 1) {
-    log.warn('Reindex option is currently enabled. This means that komodod is undergoing a reindex. ' +
+    log.warn('Reindex option is currently enabled. This means that ciphsd is undergoing a reindex. ' +
       'The reindex flag will start the index from beginning every time the node is started, so it ' +
       'should be removed after the reindex has been initiated. Once the reindex is complete, the rest ' +
       'of bitcore-node services will start.');
@@ -479,7 +479,7 @@ Bitcoin.prototype._initChain = function (callback) {
           }
           self.genesisBuffer = blockBuffer;
           self.emit('ready');
-          log.info('Komodo Daemon Ready');
+          log.info('Ciphscoin Daemon Ready');
           callback();
         });
       });
@@ -583,7 +583,7 @@ Bitcoin.prototype._updateTip = function (node, message) {
           if (Math.round(percentage) >= 100) {
             self.emit('synced', self.height);
           }
-          log.info('Komodo Height:', self.height, 'Percentage:', percentage.toFixed(2));
+          log.info('Ciphscoin Height:', self.height, 'Percentage:', percentage.toFixed(2));
         }
       });
     }
@@ -762,7 +762,7 @@ Bitcoin.prototype._checkReindex = function (node, callback) {
         }
         var percentSynced = response.result.verificationprogress * 100;
 
-        log.info('Komodo Daemon Reindex Percentage: ' + percentSynced.toFixed(2));
+        log.info('Ciphscoin Daemon Reindex Percentage: ' + percentSynced.toFixed(2));
 
         if (Math.round(percentSynced) >= 100) {
           node._reindex = false;

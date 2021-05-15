@@ -1,11 +1,3 @@
-<div class="ad" data-ng-controller="AdController" data-ng-show="error || toDisplay">
-    <strong data-ng-show="error">Join Ciphscoin Community on Discord! <a
-        href="https://discord.gg/A8d7fpka86">Clicking Here</a> </strong>
-    <strong translate data-ng-show="toDisplay">{{toDisplay.string1}} <a
-        href="{{toDisplay.link}}">{{toDisplay.anchorText}}
-        <span class="glyphicon glyphicon-share"></span></a> {{toDisplay.string2}}</strong>
-</div>
-
 <div class="connection-status container" data-ng-controller="ConnectionController">
 
   <div class="alert alert-danger" data-ng-show="!serverOnline || !clienteOnline || !apiOnline"

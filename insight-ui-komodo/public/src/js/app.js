@@ -4,7 +4,7 @@ var testnet = false;
 var netSymbol = testnet ? 'TAZ' : 'CIPHS';
 
 var defaultLanguage = localStorage.getItem('insight-language') || 'en';
-var defaultCurrency = localStorage.getItem('insight-currency') || netSymbol;
+var defaultCurrency = localStorage.getItem('insight-currency') || 'CIPHS';
 
 angular.module('insight', [
   'ngAnimate',
